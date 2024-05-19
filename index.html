@@ -1,83 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <title>Sistema de cadastro</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Sistema de cadastro</h1>
+<head>
+  <meta charset="UTF-8 pt-br">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <title>9Bloods</title>
+  <link rel="stylesheet" href="styles.css" />
 
-    <form onsubmit="lidarComFormulario()">
-      <label for="nome">Nome completo</label>
-      <input id="nome" type="text" name="nome" placeholder="Digite seu nome" />
-  
-      <label for="cpf">CPF</label>
-      <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" />
+</head>
 
-      <label for="data_nascimento">Data de Nascimento</label>
-      <input id="data_nascimento" type="date" name="data_nascimento" />
+<body>
+  <div id="background">
 
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" placeholder="Digite seu email" />
+    <div id="title">
+      <h1 id="nome">9Bloods</h1>
 
-      <label for="senha">Senha</label>
-      <input id="senha" type="password" name="senha" placeholder="Digite sua senha" />
+      <form id="form">
 
-      <button type="submit">Enviar formulário</button>
-    </form>
+        <label for="email">E-mail</label>
+        <input id="email" type="text" name="email" placeholder="E-mail" />
 
-    <script>
-      function lidarComFormulario() {
-    
-      var nome = document.getElementById('nome').value;
-      if (nome == '') {
-        alert('o nome não pode ser vazio!!');
-        return;
-      }
-        console.log(nome);
-    
-        var cpf = document.getElementById('cpf').value;
-        if (cpf == '') {
-        alert('o cpf não pode ser vazio!!');
-        return;
-      }
-        console.log(cpf);
-    
-        var data_nascimento = document.getElementById('data_nascimento').value;
-        if (data_nascimento == '') {
-        alert('a data_nascimento não pode estar vazia!!');
-        return;
-      }
-        console.log(data_nascimento);
-    
-        var email = document.getElementById('email').value;
-        if (email == '') {
-        alert('o email não pode ser vazio!!');
-        return;
-      }
-        console.log(email);
-    
-        var senha = document.getElementById('senha').value;
-        if (senha == '') {
-        alert('a senha não pode estar vazia!!');
-        return;
-      }
-        console.log(senha);
-    
-        if (senha.length < 8) {
-          alert('a senha deve conter pelo menos 8 caracteres!!');
-          return;
-        }
-    
-        alert('formulario enviado com sucesso!!');
-      }
-    </script>
-  </body>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" name="senha" placeholder="Senha" />
+        
+        <a href="./src/gmail.html">Esqueci minha senha</a>
+
+        <button type="submit">Login</button>
+        
+        <a id='criar' href="./src/criar.html">Criar conta</a>
+      </form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+</body>
+
 </html>
